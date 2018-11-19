@@ -1,0 +1,85 @@
+<div class="container">
+    <div class="row" style="margin-top:10px">
+        <div class="col-xs-8"></div>
+        <div class="col-xs-4 btn-toolbar">
+            <button type="button" class="btn btn-primary">Back</button>
+            <button type="button" class="btn btn-primary">Save</button>
+            <button type="button" class="btn btn-primary">Cancel</button>
+        </div>
+    </div>
+    <div class="row" style="margin-top:10px">
+        <div class="col-xs-8 btn-toolbar">
+            <button type="button" class="btn btn-primary">Add</button>
+            <button type="button" class="btn btn-primary">Delete</button>
+        </div>
+        <div class="col-xs-4">
+            Search : <input type="text" class="form-control">
+        </div>
+    </div>  
+</div>
+<div class="container" style="margin-top:10px">
+    <div class="row" style="margin-top:10px">
+        <div class="col-xs-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr class="table-head">
+                        <th><input type="checkbox" value=""></th>
+                        <th>Cover Code</th>
+                        <th>Section</th>
+                        <th>Bullet No.</th>
+                        <th>Sum Insured</th>
+                        <th>Sort Se</th>
+                        <th>Add SI</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let covDet of covDetList;" (click)="onSelect(covDet)" >
+                        <td><input type="checkbox" value=""></td>
+                        <td>{{covDet.covCd}}</td>
+                        <td>{{covDet.section}}</td>
+                        <td>{{covDet.bulletNo}}</td>
+                        <td>{{covDet.sumInsured}}</td>
+                        <td>{{covDet.sortSe}}</td>
+                        <td><input type="checkbox" value=""></td>
+                        <td><input type="checkbox" value=""></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="container" style="margin-top:10px">
+    <div class="row form-group" style="margin-top:10px">
+        <div class="col-xs-3">
+            Total Sum Insured
+        </div>
+        <div class="col-xs-3">
+            Section I : <input type="text" class="form-control" value={{sec1}}>
+        </div>
+        <div class="col-xs-3">
+            Section II : <input type="text" class="form-control" value={{sec2}}>
+        </div>
+        <div class="col-xs-3">
+            Section III : <input type="text" class="form-control" value={{sec3}}>
+        </div>
+    </div>
+    <div class="row" style="margin-top:10px">
+        <div class="col-xs-3"></div>
+        <div class="col-xs-3">
+            Currency : <input type="text" class="form-control" value={{covDetails.currencyCd}}>
+        </div>
+    </div>
+    <div class="row" style="margin-top:10px">
+        <div class="col-xs-3"></div>
+        <div class="col-xs-3">
+            Deductibles : <textarea id="txtDeduct" class="form-control" rows="2">{{covDetails.deductibles}}</textarea>
+        </div>
+    </div>
+    <div class="row" style="margin-top:10px">
+        <div class="col-xs-3"></div>
+        <div class="col-xs-3">
+            Remarks : <textarea id="txtRemarks" class="form-control" rows="2">{{covDetails.remarks}}</textarea>
+        </div>
+    </div>
+</div>

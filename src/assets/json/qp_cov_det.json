@@ -1,0 +1,26 @@
+{
+	"qp_cov_det": [ 
+		{
+			"id": 1,
+			"cov_cd": "Contract Works", 
+			"section": "I",
+			"bullet_no": 1.1,
+			"sum_insured": 50000000,
+			"sort_se": 10,
+			"currency_cd": "PHP",
+			"deductibles":"Deductibles applicable to entire quote, if any",
+			"remarks":"Various Remarks"
+		},
+		{
+			"id": 2,
+			"cov_cd": "Materials Supplied", 
+			"section": "II",
+			"bullet_no": 1.2,
+			"sum_insured": 20000000,
+			"sort_se": 20,
+			"currency_cd": "PHP",
+			"deductibles":"Deductibles applicable to entire quote, if any",
+			"remarks":"Various Remarks"
+		}
+	]
+}
